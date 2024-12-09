@@ -77,6 +77,10 @@ export default defineNuxtConfig({
   devtools: {
     enabled: true
   },
+  
+  site: {
+    url: process.env.NUXT_PUBLIC_SITE_URL || 'http://localhost:3000'
+  },
 
   colorMode: {
     disableTransition: true
