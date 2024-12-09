@@ -82,14 +82,16 @@ export default defineNuxtConfig({
     url: process.env.NUXT_PUBLIC_SITE_URL || 'http://localhost:3000'
   },
   
-  publicRuntimeConfig: {
-    nuxtUiProLicense: process.env.NUXT_UI_PRO_LICENSE,
-  },
-  
   colorMode: {
     disableTransition: true
   },
-
+  
+  runtimeConfig: {
+    public: {
+      nuxtUiProLicense: process.env.NUXT_UI_PRO_LICENSE || ''
+    }
+  },
+  
   routeRules: {
     '/api/search.json': { prerender: true }
   },
